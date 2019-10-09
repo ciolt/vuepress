@@ -1,5 +1,5 @@
 {
-  "name": "@vuepress/core",
+  "name": "@cscape/vuepress-core",
   "version": "1.1.0",
   "description": "Minimalistic doc generator with Vue component based layout system",
   "main": "lib/index.js",
