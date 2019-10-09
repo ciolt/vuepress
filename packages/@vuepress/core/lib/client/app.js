@@ -10,6 +10,7 @@ import ClientComputedMixin from '@transform/ClientComputedMixin'
 import VuePress from './plugins/VuePress'
 import { handleRedirectForCleanUrls } from './redirect.js'
 import { getLayoutAsyncComponent } from './util'
+import Meta from 'vue-meta'
 
 // built-in components
 import Content from './components/Content.js'
@@ -34,6 +35,7 @@ Vue.config.productionTip = false
 
 Vue.use(Router)
 Vue.use(VuePress)
+Vue.use(Meta)
 // mixin for exposing $site and $page
 Vue.mixin(dataMixin(ClientComputedMixin, siteData))
 // component for rendering markdown content and setting title etc.
