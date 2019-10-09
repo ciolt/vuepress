@@ -66,6 +66,10 @@ module.exports = siteData => {
     }
 
     get $title () {
+      if (this.__title) {
+        return this.__title
+      }
+      
       const page = this.$page
       const { metaTitle } = this.$page.frontmatter
       if (typeof metaTitle === 'string') {
@@ -82,6 +86,10 @@ module.exports = siteData => {
           ? (selfTitle + ' | ' + siteTitle)
           : siteTitle
         : selfTitle || 'VuePress'
+    }
+    
+    set $title (override) {
+      this.__title = override
     }
 
     get $description () {
